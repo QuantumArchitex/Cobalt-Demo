@@ -84,8 +84,6 @@ Use this URL to verify HTTPS access to the tenant-specific NGINX app.
 
 ##  Project Structure
 
-
-.
 ├── modules/
 │   ├── vpc
 │   ├── compute
@@ -109,13 +107,21 @@ Use this URL to verify HTTPS access to the tenant-specific NGINX app.
 ##  Example `.tfvars` for a Tenant
 
 tenant            = "archium"                         # Unique name for this tenant (used in resource naming)
+
 domain            = "archium.localdemo.com"           # (Optional) DNS subdomain if using Route53 or external DNS
+
 cidr_block        = "10.10.0.0/16"                     # CIDR block for tenant's VPC
+
 aws_region        = "us-east-1"                       # AWS region to deploy in
+
 ami_id            = "ami-05ffe3c48a9991133"           # AMI ID for EC2 (Amazon Linux 2023 w/ SSM support)
+
 instance_type     = "t2.micro"                        # EC2 instance type
+
 key_name          = "devops-key"                      # Name of existing EC2 key pair (used for SSH/SSM)
+
 public_key_path   = "C:/Users/you/.ssh/devops-key.pub" # Path to your SSH public key (used to import if needed)
+
 route53_zone_id   = "Z123456789EXAMPLE"               # (Optional) Route53 Zone ID if using hosted zone for DNS
 
 
@@ -140,7 +146,7 @@ route53_zone_id   = "Z123456789EXAMPLE"               # (Optional) Route53 Zone 
 This project was designed as part of a DevOps architecture challenge. Feel free to raise issues or fork it for experimentation.
 
 **Author:** Sumanth M
-**Date:** July 2025
+**Date:** 06-July 2025
 
 ---
 
