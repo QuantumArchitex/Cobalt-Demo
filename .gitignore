@@ -1,0 +1,35 @@
+# .gitignore for Terraform multi-tenant-infra
+# Ignore Terraform state and sensitive files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ignore plan files
+*.tfplan
+
+# Ignore variable files with secrets
+# *.tfvars
+# !tenants/*.tfvars
+
+# Ignore SSH keys
+*.pem
+*.key
+*.pub
+
+# Ignore local scripts output
+scripts/*.log
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore backup files
+*.bak
+*.swp
+
+# Prevent pushing to GitHub (safety, but not enforced by git)
+# To avoid accidental pushes, set the remote to the provided repo only
